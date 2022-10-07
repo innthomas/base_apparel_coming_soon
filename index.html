@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css"/>
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+  <div class="base-container">
+<div class="base-container__main">
+  <header class="base__header">
+<img class="base__header-logo" src="./images/logo.svg" alt="logo">
+  </header>
+  <h1 class="base__h1">
+    <span class="base__h1-span">
+
+      We're 
+    </span>
+    coming soon
+  </h1>
+   <p class="base__paragraph">
+     Hello fellow shoppers! We're currently building our new fashion store. 
+     Add your email below to stay up-to-date with announcements and our launch deals.
+    </p> 
+    <div id="base__email-input-wrapper" class="base__email-input-wrapper">
+      <input id="base__email-input" class="base__email-input" type="email" placeholder="Email Address" onkeyup="validation()">
+      
+     
+      <img id="icon-error" class="base__email-input-error" src="./images/icon-error.svg" alt="error">
+      <div class="base__email-input-arrow-wrapper">
+           <img class="base__email-input-arrow" src="./images/icon-arrow.svg" alt="arrow">
+      </div>
+      <small id="base__email-error-msg" class="base__email-error-msg">Please provide a valid email!</small>
+     
+    </div>
+  
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">innocent thomas</a>.
+    </p>
+  </footer> -->
+</div>
+<div class="base-container__hero">
+  <img class="base__hero-img" src="./images/hero-desktop.jpg" alt="hero-desktop">
+  <img class="base_hero-img-mobile" src="./images/hero-mobile.jpg" alt="hero mobile">
+  <!-- <img class="mobile-logo" src="./images/logo.svg" alt="logo"> -->
+</div>
+    
+   
+    
+    
+  </div>
+  <script type="text/javascript">
+    function validation(){
+      var form = document.getElementById("base__email-input-wrapper");
+      var iconError = document.getElementById('icon-error');
+      var eMail = document.getElementById("base__email-input");
+      var errorMsg = document.getElementById("base__email-error-msg");
+      var pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
+      if (!eMail.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+         iconError.classList.add('invalid');
+         iconError.classList.remove('valid');
+         errorMsg.classList.remove('valid');
+         errorMsg.classList.add('invalid');
+         eMail.style.borderColor = `hsl(0, 93%, 68%)`;
+        
+      }else{
+        iconError.classList.add('valid');
+        iconError.classList.remove('invalid');
+         errorMsg.classList.remove('invalid');
+         errorMsg.classList.add('valid');
+         eMail.style.borderColor = rgba(204, 196, 200, 0.8);
+      }
+    }
+  </script>
+</body>
+</html>

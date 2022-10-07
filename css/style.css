@@ -1,0 +1,150 @@
+:root{
+    --saturated-red: hsl(0, 36%, 70%);
+    --soft-red:hsl(0, 93%, 68%);
+    --greyish-red:hsl(0, 6%, 24%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.base-container{
+    display:flex;
+    max-height: 100vh;
+    
+}
+.base-container__main{
+    margin: 5rem 10rem;
+}
+.base__header-logo{
+    margin-bottom: 4rem;
+}
+.base__h1{
+    text-transform:uppercase ;
+    font-size: 3.8rem;
+    letter-spacing: .8rem;
+    margin-bottom: 2rem;
+}
+
+.base__h1-span{
+    color:var(--saturated-red);
+    display: block;
+
+}
+.base__paragraph{
+    color: var(--saturated-red);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.base__email-input{
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border:1px solid rgba(204, 196, 200, 0.8);
+    outline: none;
+
+}
+/* .base__email-input:focus{
+    border: 2px solid var(--soft-red);
+} */
+
+.base__email-input-wrapper{
+    position: relative;
+}
+.base__email-input-error{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+   
+}
+.base__email-input-arrow-wrapper{
+    width:80px;
+    height:45px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(223, 169, 169);
+    /*background-image: linear-gradient(135deg, hsl(0, 0%, 100%) 0 50%,hsl(0, 100%, 98%) 50% 100%);*/
+    box-shadow: rgba(240, 178, 178, 0.25) 0px 13px 27px -5px, rgba(231, 123, 123, 0.3) 0px 8px 16px -8px;
+    position: absolute;
+    top: 10%;
+    right: 4%;
+    cursor: pointer;
+   
+}
+.base__email-error-msg{
+    display: none;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: red;
+    opacity: 0.6;
+
+}
+.base__hero-img{
+    height: 100vh;
+}
+
+.invalid{
+    display:block;
+}
+
+.valid{
+    display: none;
+}
+.base_hero-img-mobile{
+    display: none;
+}
+.mobile-logo{
+    display: none;
+}
+
+@media (max-width:375px) {
+    .mobile-logo{
+        display: block;
+    }
+    .base__hero-img{
+        display: none;
+    }
+    .base_hero-img-mobile{
+        display: block;
+        margin-top: 3rem;
+        height: 200px;
+        width: 350px;
+    }
+    .base-container{
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    .base-container__main{
+        margin: 2rem 2rem;
+    }
+    /* .base__header-logo{
+       display:none;
+    } */
+    .base__h1{
+        text-transform:uppercase ;
+        font-size: 1.5rem;
+        text-align: center;  
+    }
+    .base__paragraph{
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .base__header-logo{
+        position:absolute;
+        top: 10px;
+        left: 10%;
+        width: 100px;
+    }
+    
+
+    
+}
